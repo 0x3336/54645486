@@ -1,0 +1,17 @@
+lag = true
+while lag == true do
+task.wait()
+local args = {
+    [1] = "ShowLayer",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").EditLayer:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "HideLayer",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").EditLayer:InvokeServer(unpack(args))
+end
